@@ -6,7 +6,7 @@
 /*   By: tchow-so <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/29 13:12:24 by tchow-so          #+#    #+#             */
-/*   Updated: 2023/12/29 13:34:57 by tchow-so         ###   ########.fr       */
+/*   Updated: 2023/12/29 13:36:42 by tchow-so         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,9 +47,9 @@ char	*ft_strjoin_gnl(char *str, char *next_buffer)
 	if (!new_str)
 		return (NULL);
 	i = 0;
-	while (*s1)
+	while (*str)
 		new_str[i++] = *str++;
-	while (*s2)
+	while (*next_buffer)
 		new_str[i++] = *next_buffer++;
 	new_str[i] = '\0';
 	if (ptr_str)
