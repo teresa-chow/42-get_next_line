@@ -6,57 +6,54 @@
 /*   By: tchow-so <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/29 13:12:24 by tchow-so          #+#    #+#             */
-/*   Updated: 2023/12/28 14:49:26 by tchow-so         ###   ########.fr       */
+/*   Updated: 2023/12/29 13:15:17 by tchow-so         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
 
-int	ft_strlen(char *str)
+/* calculate length of string */
+int	ft_strlen_gnl(char *str)
 {
-	int	i;
+	int	len;
 
-	i = 0;
-	while (str[i] != '\0')
-		i++;
-	return (i);
+	len = 0;
+	while (str[len] != '\0')
+		len++;
+	return (len);
 }
 
-char	*ft_strchr(const char *s, int c)
+/* find char in string */
+char	*ft_strchr_gnl(const char *str, int c)
 {
-	int		i;
-	char	*ptr;
-
-	i = 0;
-	ptr = (char *)s;
-	while (ptr[i] && (ptr[i] != (unsigned char)c))
-		i++;
-	if (ptr[i] == (unsigned char)c)
-		return (&ptr[i]);
+	while ((*str) && ((unsigned char)*str != (unsigned char)c))
+		str++;
+	if ((unsigned char)*str == (unsigned char)c)
+		return ((char *)str);
 	return (NULL);
 }
 
-char	*ft_strjoin(char *s1, char *s2)
+/* join two strings */
+// review need of ptr_s1
+char	*ft_strjoin_gnl(char *s1, char *s2)
 {
 	char	*s3;
+	char	*ptr_s1;
+	int		len;
 	int		i;
-	int		j;
 
-	s3 = malloc(ft_strlen(s1) + ft_strlen(s2) + 1);
+	ptr_s1 = s1;
+	len = ft_strlen_gnl(s1) + ft_strlen_gnl(s2);
+	s3 = malloc(sizeof(char) * (len + 1));
 	if (!s3)
 		return (NULL);
 	i = 0;
-	while (s1[i])
-	{
-		s3[i] = s1[i];
-		i++;
-	}
-	j = 0;
-	while (s2[j])
-	{
-		s3[i + j] = s2[j];
-		j++;
-	}
-	s3[i + j] = '\0';
+	while (*s1)
+		s3[i++] = *s1++;
+	while (*s2)
+		s3[i++] = *s2++;
+	s3[i] = '\0';
+	if (ptr_s1)
+		free(ptr_s1);
 	return (s3);
 }
