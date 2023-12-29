@@ -6,7 +6,7 @@
 /*   By: tchow-so <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/27 09:23:49 by tchow-so          #+#    #+#             */
-/*   Updated: 2023/12/29 12:58:32 by tchow-so         ###   ########.fr       */
+/*   Updated: 2023/12/29 13:28:23 by tchow-so         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ char	*read_from_fd(char *str, int fd)
 	int		bytes_read;
 	char	*buffer;
 
-	buffer = malloc(BUFFER_SIZE + 1);
+	buffer = malloc(sizeof(char) * (BUFFER_SIZE + 1));
 	if (!buffer)
 		return (NULL);
 	bytes_read = 1;

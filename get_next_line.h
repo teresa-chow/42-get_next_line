@@ -6,7 +6,7 @@
 /*   By: tchow-so <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/27 09:00:03 by tchow-so          #+#    #+#             */
-/*   Updated: 2023/12/29 12:45:35 by tchow-so         ###   ########.fr       */
+/*   Updated: 2023/12/29 13:34:46 by tchow-so         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,6 @@
 char	*get_next_line(int fd);
 int		ft_strlen_gnl(char *str);
 char	*ft_strchr_gnl(const char *str, int c);
-char	*ft_strjoin_gnl(char *s1, char *s2);
+char	*ft_strjoin_gnl(char *str, char *next_buffer);
 
 #endif
