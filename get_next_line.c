@@ -6,9 +6,12 @@
 /*   By: tchow-so <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/27 09:23:49 by tchow-so          #+#    #+#             */
-/*   Updated: 2023/12/29 13:28:23 by tchow-so         ###   ########.fr       */
+/*   Updated: 2024/01/03 08:47:56 by tchow-so         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+/* This project is about programming a function that returns a line read
+from a file descriptor. */
 
 #include "get_next_line.h"
 
@@ -29,6 +32,8 @@ char	*get_next_line(int fd)
 		str[0] = '\0';
 	}
 	str = read_from_fd(str, fd);
+	if (!str)
+		return (NULL);
 	line = get_line(str);
 	str = clear_line(str);
 	return (line);

@@ -6,7 +6,7 @@
 /*   By: tchow-so <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/05 10:04:54 by tchow-so          #+#    #+#             */
-/*   Updated: 2023/12/29 12:45:28 by tchow-so         ###   ########.fr       */
+/*   Updated: 2024/01/03 08:44:21 by tchow-so         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,23 +20,10 @@ int	main(void)
 	char	*str;
 
 	fd = open("file.txt", O_RDONLY);
-	str = get_next_line(fd);
-	printf ("%s", str);
-	free(str);
-	str = get_next_line(fd);
-	printf ("%s", str);
-	free(str);
-	str = get_next_line(fd);
-	printf ("%s", str);
-	free(str);
-	str = get_next_line(fd);
-	printf ("%s", str);
-	free(str);
-	str = get_next_line(fd);
-	printf ("%s", str);
-	free(str);
-	str = get_next_line(fd);
-	printf ("%s", str);
-	free(str);
+	while ((str = get_next_line(fd)))
+	{
+		printf("%s", str);
+		free(str);
+	}
 	return (close(fd));
 }
