@@ -34,16 +34,6 @@ ___
 >[!NOTE]
 >This codebase follows the applicable programming standard at 42, known as the Norm.
 
-<details open>
-  <summary><h2>Mandatory part</h2></summary>
-
-</details>
-
-<details open>
-  <summary><h2>Bonus part</h2></summary>
-
-</details>
-
 ___
 
 </br>
