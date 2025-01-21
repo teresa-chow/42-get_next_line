@@ -6,13 +6,13 @@ ___
 
 
 ### Table of contents
-[Usage](#compass-usage) · [Subject](#book-subject) · [Mandatory](#mandatory-part) · [Bonus](#bonus-part) · [License](#license)
+[Usage](#usage) · [License](#license)
 
 ___
 
 </br>
 
-# :compass: Usage
+# Usage
 
 1. Clone repository
     ```bash
@@ -23,11 +23,6 @@ ___
     ```c
     #include "get_next_line.h"
     ```
-
-</br>
-
-# :book: Subject
-:page_facing_up: [get_next_line subject EN [PDF]](./en_getnextline_2023.pdf)
 
 </br>
 
